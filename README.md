@@ -18,6 +18,16 @@ This structure is crucial for the corpus test suite in the `angr` pipeline, whic
 subset tests based on the directory structure. If any major directory structure changes occur
 in this repository, please update the GitHub Action variables in the `angr` pipeline accordingly.
 
+### Top level directories
+
+Currently there are two top-level directories: `cgc-challenges` and `stable`.
+`cgc-challenges` holds the full corpus of binaries summarized in the table
+above. `stable` holds a smaller subset that were deemed to be more stable,
+in the sense that the runs of the `angr` decompiler were more likely to
+produce consistent results. A subset of `cgc-challengers` is used in pull
+request-triggered actions, whereas the stable binaries are used for the
+nightly decompiler corpus test.
+
 ### Actions related to this repo
 
 #### Add a file
